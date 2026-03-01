@@ -15,8 +15,10 @@ logging:
   #      max-file-size: 100MB
   structured:
     format:
-      console: cn.javastack.springboot.logging.SimpleStructuredLogFormat # ecs
-      file: cn.javastack.springboot.logging.SimpleStructuredLogFormat # ecs
+#       console: ecs
+      console: cn.javastack.springboot.logging.SimpleStructuredLogFormat
+#       file: ecs
+      file: cn.javastack.springboot.logging.SimpleStructuredLogFormat
     json:
       exclude:
         - process
@@ -26,11 +28,11 @@ logging:
         message: msg
       add:
         encrypt: false
-#      stacktrace:
-#        root: first
-#        max-length: 1024
-#        include-common-frames: true
-#        include-hashes: true
+      stacktrace:
+        root: first
+        max-length: 1024
+        include-common-frames: true
+        include-hashes: true
   charset:
     console: UTF-8
     file: UTF-8
